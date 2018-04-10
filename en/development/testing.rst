@@ -657,6 +657,12 @@ Fixture directory. You can also load fixtures from CakePHP core, or plugins::
 Using the ``core`` prefix will load fixtures from CakePHP, and using a plugin
 name as the prefix, will load the fixture from the named plugin.
 
+.. note::
+
+    When using the plugin-prefix you have to add the plugins fixture folder path to composer.json (under autload-dev).
+    e.G "CakeDC\\Users\\Test\\Fixture\\": "vendor/cakedc/users/tests/fixture/"
+    Don't forget to composer dump-autoload
+
 You can control when your fixtures are loaded by setting
 :php:attr:`Cake\\TestSuite\\TestCase::$autoFixtures` to ``false`` and later load
 them using :php:meth:`Cake\\TestSuite\\TestCase::loadFixtures()`::
